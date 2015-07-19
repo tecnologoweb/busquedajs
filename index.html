@@ -1,0 +1,36 @@
+<html>
+<head>
+<script language='JavaScript1.2'>
+            function buscar_op(obj,cadena){
+               var puntero=cadena.length;
+               var encontrado=false;
+               var opcombo=0;
+                  while (!encontrado && (opcombo < obj.length)){
+                    if(obj[opcombo].text.substr(0,puntero).toLowerCase()==cadena.toLowerCase()){
+                       obj.selectedIndex=opcombo;
+                       encontrado=true;
+                       }else{
+                        opcombo++;
+                     }
+                  }
+            }
+        </script>
+
+</head>
+<body>
+<form>
+<select name="comboPersonas" id="comboPersonas">
+ <option>Antonio</option>
+ <option>Bernardo</option>
+ <option>Genaro</option>
+ <option>Lorenzo</option> 
+ <option>Santiago</option>
+ <option>Santos</option>
+ <option>Tania</option>
+</select>
+&nbsp;&nbsp;Buscar: <input type='text' name='cadenaBusqueda' onKeyUp="buscar_op(document.getElementById('comboPersonas'),this.value)">
+</select>
+</body>
+</html>
+	 
+  	
